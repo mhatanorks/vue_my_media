@@ -8,5 +8,16 @@ body {
 }
 
 div {
-  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+footer {
+  background: #7bd1c4;
+  width: 100vw;
+}
+
+#app {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }

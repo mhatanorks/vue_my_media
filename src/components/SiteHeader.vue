@@ -17,7 +17,6 @@
             <p>userName</p>
         </nav>
     </header>
-
 </template>
 
 <style scoped>

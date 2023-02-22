@@ -1,3 +1,10 @@
 {
-    "items": []
-  }
+  "users": [
+    {
+      "username": "Mhatano",
+      "mailAddress": "qwerty@qwerty.com",
+      "password": "qwerty",
+      "id": 1
+    }
+  ]
+}
