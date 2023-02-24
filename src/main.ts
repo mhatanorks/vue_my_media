@@ -1,6 +1,9 @@
 import { createApp } from "vue";
-import "./styles/css/style.css"
-import "./styles/css/tailwind.css"
+import "./styles/css/style.css";
+import "./styles/css/tailwind.css";
 import App from "./App.vue";
+import router from './router/index.js'
 
-createApp(App).mount("#app");
+const app = createApp(App); //Vue のインスタンスを生成
+app.use(router);
+app.mount("#app");
