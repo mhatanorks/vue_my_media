@@ -11,7 +11,7 @@
 
 <template>
     <header class="flex justify-between">
-        <p class="text-2xl">logo</p>
+        <p class="text-3xl">logo</p>
         <nav class="flex">
             <p>about</p>
             <p>userName</p>
@@ -22,5 +22,6 @@
 <style scoped>
 header {
     background: #7bd1c4;
+    height: 60px;
 }
 </style>
