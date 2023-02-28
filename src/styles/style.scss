@@ -14,8 +14,9 @@ div {
 
 footer {
   background: #7bd1c4;
-  width: 100vw;
-  margin-top: calc(30vh);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
 #app {

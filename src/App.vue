@@ -9,18 +9,8 @@ import { RouterLink, RouterView } from "vue-router";
 
 <template>
   <SiteHeader />
-  
-  <RouterLink to="/">Home</RouterLink>
-  <RouterLink to="/about">About</RouterLink>
-  <RouterLink to="/anonymous">異次元</RouterLink>
   <RouterView />
-
-  <!-- 
-  <Enter />
-  <Login />
-  <SearchBook />
   <SiteFooter />
-   -->
 </template>
 
 <style scoped></style>
