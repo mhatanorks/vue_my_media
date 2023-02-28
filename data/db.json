@@ -2,9 +2,24 @@
   "users": [
     {
       "username": "Mhatano",
-      "mailAddress": "qwerty@qwerty.com",
+      "email": "qwerty@example.com",
       "password": "qwerty",
       "id": 1
+    },
+    {
+      "username": "uni",
+      "email": "uni",
+      "password": "uni",
+      "id": 2,
+      "favBooks": [
+        {
+          "title": "Chasing After Aoi Koshiba 1",
+          "authors": [
+            "FLY"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=IQ4lEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+        }
+      ]
     }
   ]
 }
