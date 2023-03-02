@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import About from "../views/About.vue";
+import SearchPage from "../views/SearchPage.vue";
 import Home from "../views/Home.vue";
 import NotFound from "../views/NotFound.vue";
 
@@ -12,10 +12,10 @@ const router = createRouter({
       component: Home,
     },
     {
-      path: "/about",
-      name: "about",
+      path: "/SearchPage",
+      name: "SearchPage",
       // HomeView と同じように以下のように書き換える
-      component: About,
+      component: SearchPage,
     },
     { path: "/:catchAll(.*)", component: NotFound },
   ],

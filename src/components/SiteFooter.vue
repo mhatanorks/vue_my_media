@@ -8,21 +8,35 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer class="text-center p-3 w-100%">
+  <footer class="text-center pt-3 pb-5 w-100%">
     <nav>
-      <button class="p-2 m-2 bg-teal-50 rounded-lg">
-        <RouterLink to="/">Home</RouterLink>
-      </button>
-      <button class="p-2 m-2 bg-teal-50 rounded-lg">
-        <RouterLink to="/about">About</RouterLink>
-      </button>
-      <button class="p-2 m-2 bg-teal-50 rounded-lg">
-        <RouterLink to="/anonymous">異次元</RouterLink>
-      </button>
+      <RouterLink to="/">
+        <button class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl">
+          <img src="../images/icons/book_image.png" alt="">
+          <p>書庫</p>
+        </button>
+      </RouterLink>
+      <RouterLink to="/SearchPage">
+        <button class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl">
+          <img src="../images/icons/search_image.png" alt="">
+          <p>検索</p>
+        </button>
+      </RouterLink>
+      <RouterLink to="/anonymous">
+        <button class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl">
+          <img src="../images/icons/warp_image.png" alt="">
+          <p>異次元</p>
+        </button>
+      </RouterLink>
     </nav>
   </footer>
 </template>
 
 <style scoped>
-
+img {
+  width: 40px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
 </style>

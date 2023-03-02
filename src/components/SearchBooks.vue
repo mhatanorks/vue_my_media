@@ -9,6 +9,7 @@ import { ref } from "vue";
 import axios from "axios";
 import { useLogin } from "../hooks/useLogin";
 import FavButton from "./FavButton.vue";
+import LoadingSearch from "./LoadingSearch.vue";
 const loginUser = useLogin();
 
 interface ImageLinks {
@@ -35,10 +36,12 @@ const searchResults = ref<Book[]>([]); // 検索結果を格納
 const resultNull = ref(false); // 検索0件表示
 const searchPending = ref(false); // 検索中
 const searchError = ref(false); // 検索エラー
-
+const isActiveSearchBox = ref(false); // 検索ボックススライド
 
 // 検索ボタン押下
-const searchBooks = async () => {
+const searchBooks = async (e: Event) => {
+  e.preventDefault();
+  isActiveSearchBox.value = true;
   searchPending.value = true; // 検索中
   searchResults.value = []; // resultリセット
   resultNull.value = false; // 検索0件リセット
@@ -60,26 +63,37 @@ const searchBooks = async () => {
     searchError.value = true;
   }
 };
-
 </script>
 
 <template>
-  <div class="mb-32">
-    <div>
+  <div
+    class="search-contents"
+    :class="{ isActiveSearchBox: isActiveSearchBox }"
+  >
+    <form>
       <input
         type="text"
         v-model="searchText"
-        class="w-72 h-10 mx-3 rounded-lg border-2 border-teal-600 text-lg"
+        class="w-96 h-16 mx-3 rounded-lg border-4 border-teal-600 text-3xl p-2"
       />
-      <button @click="searchBooks" class="p-2 bg-teal-400 rounded-lg">
+      <button
+        type="submit"
+        @click="searchBooks"
+        class="h-16 px-6 bg-teal-400 rounded-lg font-bold text-3xl"
+      >
         検索
       </button>
-    </div>
+    </form>
 
-    <p v-if="searchPending">検索中</p>
     <p v-if="searchError">エラーが発生しました。</p>
     <p v-if="resultNull">検索結果はありません。他のワードで検索してみてね。</p>
-
+    <p v-if="searchPending">
+      <LoadingSearch />
+      <LoadingSearch />
+      <LoadingSearch />
+      <LoadingSearch />
+      <LoadingSearch />
+    </p>
     <!-- 検索結果 -->
     <div
       v-for="result in searchResults"
@@ -119,10 +133,9 @@ const searchBooks = async () => {
           </div>
         </div>
         <div>
-          <FavButton :msg="result" />
-
-          <button class="p-1 m-1 bg-teal-400 rounded-lg">読んだ</button>
-          <button class="p-1 m-1 bg-amber-500 rounded-lg">
+          <FavButton :result="result" />
+          <button class="p-2 m-1 bg-teal-400 rounded-lg">読んだ</button>
+          <button class="p-2 m-1 bg-amber-500 rounded-lg">
             <a
               :href="`https://www.amazon.co.jp/s?k=${result.volumeInfo.title}&i=stripbooks&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=20Z9KH2B14U9V&sprefix=${result.volumeInfo.title}stripbooks%2C154&ref=nb_sb_noss`"
               target="_blank"
@@ -143,8 +156,57 @@ const searchBooks = async () => {
   --></div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 img {
   max-width: 128px;
+}
+
+.search-contents {
+  position: relative;
+  transition: all 0.4s;
+  transform: translateY(33vh);
+}
+.isActiveSearchBox {
+  transform: translateY(0);
+  input {
+    transition: all 0.4s;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    width: 18rem;
+    height: 2.5rem;
+    margin: 0 0.75rem;
+    border: 2px solid rgb(13 148 136 / var(--tw-border-opacity));
+  }
+  button {
+    transition: all 0.4s;
+    line-height: 1.75rem;
+    padding: 0 0.5rem;
+    height: 2.5rem;
+    font-size: 1.125rem;
+  }
+}
+
+.gray-scale {
+  background: linear-gradient(
+    90deg,
+    #838383,
+    #a1a1a1,
+    #b3b3b3,
+    #a1a1a1,
+    #838383
+  ); /*グラデーションを定義*/
+  background-size: 200% 200%; /*サイズを大きくひきのばす*/
+  animation: bgGradient 2.5s ease infinite;
+}
+@keyframes bgGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 </style>
