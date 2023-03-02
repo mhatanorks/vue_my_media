@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import RecordFav from "./RecordFav.vue"
+import FavToRecord from "./FavToRecord.vue"
 const props = defineProps({
   fav: Object,
 });
 const showModal = ref(false); // 登録モーダル
-
 </script>
 
 <template>
@@ -18,6 +17,6 @@ const showModal = ref(false); // 登録モーダル
           Record
         </button>
         <Teleport to="body">
-          <RecordFav :show="showModal" :fav="fav" @close="showModal = false" />
+          <FavToRecord :show="showModal" :fav="fav" @close="showModal = false" />
         </Teleport>
 </template>

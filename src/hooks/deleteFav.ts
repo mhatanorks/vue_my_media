@@ -17,18 +17,23 @@ export const DeleteFavBooks = async (uni: VolumeInfo, user: any) => {
   const unii = userData.value.favBooks.findIndex(
     (e: any) => e.title === uni.title
   );
+  if (userData.value.favBooks[unii] === undefined) {
+    return
+  } else {
 
-  // index番号のbooleanをひっくり返す
-  console.log(userData.value.favBooks[unii].delete);
-  userData.value.favBooks[unii].delete = true;
-  console.log(userData.value.favBooks[unii].delete);
-
-  // 更新
-  // 送信
-  await axios.put(
-    `http://127.0.0.1:8000/users/${userData.value.id}`,
-    userData.value
-  );
+    
+    // index番号のbooleanをひっくり返す
+    console.log(userData.value.favBooks[unii]);
+    userData.value.favBooks[unii].delete = true;
+    console.log(userData.value.favBooks[unii].delete);
+    
+    // 更新
+    // 送信
+    await axios.put(
+      `http://127.0.0.1:8000/users/${userData.value.id}`,
+      userData.value
+      );
+    }
 };
 
 interface ImageLinks {

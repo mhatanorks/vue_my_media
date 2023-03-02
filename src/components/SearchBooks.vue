@@ -10,6 +10,7 @@ import axios from "axios";
 import { useLogin } from "../hooks/useLogin";
 import FavButton from "./FavButton.vue";
 import LoadingSearch from "./LoadingSearch.vue";
+import RecordButton from "./RecordButton.vue";
 const loginUser = useLogin();
 
 interface ImageLinks {
@@ -52,7 +53,7 @@ const searchBooks = async (e: Event) => {
       .then((response) => (searchResults.value = response.data.items));
     searchPending.value = false; // 検索終了
     searchError.value = false; // エラー表記リセット
-    console.log(searchResults.value);
+    console.log(searchResults.value[0]);
     if (searchResults.value == undefined) {
       resultNull.value = true; // 検索0件表示
     } else {
@@ -134,7 +135,8 @@ const searchBooks = async (e: Event) => {
         </div>
         <div>
           <FavButton :result="result" />
-          <button class="p-2 m-1 bg-teal-400 rounded-lg">読んだ</button>
+          <!-- <button class="p-2 m-1 bg-teal-400 rounded-lg">レコード</button> -->
+          <RecordButton :fav="result.volumeInfo"/>
           <button class="p-2 m-1 bg-amber-500 rounded-lg">
             <a
               :href="`https://www.amazon.co.jp/s?k=${result.volumeInfo.title}&i=stripbooks&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=20Z9KH2B14U9V&sprefix=${result.volumeInfo.title}stripbooks%2C154&ref=nb_sb_noss`"
