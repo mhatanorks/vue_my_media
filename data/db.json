@@ -11,15 +11,108 @@
       "email": "uni",
       "password": "uni",
       "id": 2,
+      "recordBooks": [
+        {
+          "title": "リーダブルコード",
+          "authors": [
+            "Dustin Boswell",
+            "Trevor Foucher"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=Wx1dLwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "date": "2023-03-01",
+          "Memo": "みんな読め",
+          "delete": false
+        },
+        {
+          "title": "2023 猫城主さんじゅーろーカレンダー",
+          "thumbnail": "http://books.google.com/books/content?id=qA9IzwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "date": "2023-03-01",
+          "Memo": "猫が可愛い",
+          "delete": false
+        },
+        {
+          "title": "リーダブルコード",
+          "authors": [
+            "Dustin Boswell",
+            "Trevor Foucher"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=Wx1dLwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "date": "2023-03-02",
+          "Memo": "よんだ",
+          "delete": false
+        }
+      ],
       "favBooks": [
         {
           "title": "Chasing After Aoi Koshiba 1",
           "authors": [
             "FLY"
           ],
-          "thumbnail": "http://books.google.com/books/content?id=IQ4lEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+          "thumbnail": "http://books.google.com/books/content?id=IQ4lEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "delete": true
+        },
+        {
+          "title": "鋼結構設計入門",
+          "authors": [
+            "許聖富"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=7y9qDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+          "delete": true
+        },
+        {
+          "title": "鋼のメンタルを手に入れる",
+          "authors": [
+            "いっちー"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=Ab5ezQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": false
+        },
+        {
+          "title": "2023 猫城主さんじゅーろーカレンダー",
+          "thumbnail": "http://books.google.com/books/content?id=qA9IzwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": false
+        },
+        {
+          "title": "つぐはらふみのものろーぐ first session",
+          "authors": [
+            "つぐはらふみ"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=NXwnNwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": false
+        },
+        {
+          "title": "ひーろひーろひよこっこ",
+          "authors": [
+            "比留井洋子"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=c4x1QgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": false
+        },
+        {
+          "title": "リーダブルコード",
+          "authors": [
+            "Dustin Boswell",
+            "Trevor Foucher"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=Wx1dLwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": true
+        },
+        {
+          "title": "決定版ドラえもん大事典",
+          "authors": [
+            "藤子 F・不二雄",
+            "いそほゆうすけ"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=iZmytAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": false
         }
       ]
+    },
+    {
+      "username": "tako",
+      "email": "tako",
+      "password": "tako",
+      "id": 3
     }
   ]
 }

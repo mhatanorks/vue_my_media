@@ -2,11 +2,11 @@
 import { ref } from "vue";
 import axios from "axios";
 import { useLogin } from "../hooks/useLogin";
-import {DeleteFavBooks} from "../hooks/deleteFav"
+import { DeleteFavBooks } from "../hooks/deleteFav";
 
 const loginUser = useLogin();
 
-defineProps<{ msg: any }>();
+defineProps<{ result: any }>();
 
 interface ImageLinks {
   smallThumbnail: string;
@@ -42,22 +42,20 @@ const favBooks = async (uni: VolumeInfo) => {
     userData.value
   );
 };
-
-
 </script>
 
 <template>
   <button
     v-if="favCheck"
-    @click="favBooks(msg.volumeInfo)"
-    class="p-1 m-1 bg-teal-400 rounded-lg"
+    @click="favBooks(result.volumeInfo)"
+    class="p-2 m-1 bg-teal-400 rounded-lg"
   >
     ♡
   </button>
   <button
     v-else
-    @click="DeleteFavBooks(msg.volumeInfo, loginUser)"
-    class="p-1 m-1 bg-rose-500 rounded-lg"
+    @click="DeleteFavBooks(result.volumeInfo, loginUser)"
+    class="p-2 m-1 bg-rose-500 rounded-lg"
   >
     ♡
   </button>

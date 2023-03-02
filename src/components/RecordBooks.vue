@@ -19,6 +19,8 @@ interface Book {
   author: string;
   thumbnail: string;
   delete: boolean;
+  date: Date;
+  Memo: string,
 }
 
 const loginUser = useLogin();
@@ -30,7 +32,7 @@ const Loading = async () => {
     .then(
       (res) =>
         // console.log(res.data[0]), (userData.value = res.data[0].favBooks)
-        (userData.value = res.data[0].favBooks.filter(
+        (userData.value = res.data[0].recordBooks.filter(
           (e: Book) => e.delete == false
         ))
     );
@@ -61,23 +63,13 @@ const clickDelete = async (fav: any) => {
           {{ author }}
         </div>
       </div>
-      <div class="buttons">
-        <button
-          @click="clickDelete(fav)"
-          class="p-2 m-1 bg-rose-500 rounded-lg"
-        >
-          ♡
-        </button>
-        <button class="p-2 m-1 bg-amber-500 rounded-lg">
-          <a
-            :href="`https://www.amazon.co.jp/s?k=${fav.title}&i=stripbooks&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=20Z9KH2B14U9V&sprefix=${fav.title}stripbooks%2C154&ref=nb_sb_noss`"
-            target="_blank"
-            rel="noopener noreferrer"
-            >amazon</a
-          >
-        </button>
-        <RecordButton :fav="fav"/>
+      <div class="">
+        記録日: {{ fav.date }}
       </div>
+      <div class="">
+        メモ: {{ fav.Memo }}
+      </div>
+
     </div>
   </div>
 </template>

@@ -4,6 +4,7 @@ import SearchBooks from "../components/SearchBooks.vue";
 import { useLogin } from "../hooks/useLogin";
 import { ref } from "vue";
 import FavBooks from "../components/FavBooks.vue";
+import RecordBooks from "../components/RecordBooks.vue";
 
 const loginUser = useLogin();
 const activeButton = ref("button1");
@@ -17,30 +18,29 @@ function showInfo(buttonName: any) {
   <!-- ログインしてたら -->
   <section v-if="loginUser">
     <p class="p-8 text-xl">welcome!!</p>
-    <div>
+    <div class="mb-32">
       <!-- タブ切り替え -->
       <button
         @click="showInfo('button1')"
         class="p-2 m-2 bg-teal-400 rounded-lg"
       >
-        My Books
+        My Records
       </button>
       <button
         @click="showInfo('button2')"
         class="p-2 m-2 bg-teal-400 rounded-lg"
       >
-        書籍検索
+        fav Books
       </button>
 
       <!-- My Books -->
       <div v-if="activeButton === 'button1'">
-      <p>My Books</p>
+      <RecordBooks />
+    </div>
+    
+    <!-- SearchBooks -->
+    <div v-if="activeButton === 'button2'">
       <FavBooks />
-      </div>
-
-      <!-- SearchBooks -->
-      <div v-if="activeButton === 'button2'">
-        <SearchBooks />
       </div>
     </div>
   </section>

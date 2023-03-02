@@ -62,7 +62,7 @@ const loginUser = async (e: any) => {
       </div>
       <div>
         <label for="" class="tracking-custom"
-          >パスワード<input type="text" v-model="password"
+          >パスワード<input type="password" v-model="password"
         /></label>
       </div>
       <div>
@@ -82,7 +82,6 @@ const loginUser = async (e: any) => {
       登録はこちら
     </button>
     <Teleport to="body">
-      <!-- use the modal component, pass in the prop -->
       <Enter :show="showModal" @close="showModal = false" />
     </Teleport>
   </div>

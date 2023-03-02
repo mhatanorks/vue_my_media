@@ -42,3 +42,13 @@ interface VolumeInfo {
   description: string;
   imageLinks: ImageLinks;
 }
+
+/*
+How to use ?
+=> add this code.
+
+import { DeleteFavBooks } from "../hooks/deleteFav"
+
+@click="DeleteFavBooks(書籍情報取得オブジェクト, loginUser)"
+
+*/
