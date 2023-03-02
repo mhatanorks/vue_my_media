@@ -8,9 +8,15 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <SiteHeader />
-  <RouterView />
+    <SiteHeader />
+    <div class="routers">
+      <RouterView />
+    </div>
   <SiteFooter />
 </template>
 
-<style scoped></style>
+<style scoped>
+.routers {
+  margin-top: 60px;
+}
+</style>

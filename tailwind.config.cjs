@@ -3,6 +3,11 @@ module.exports = {
   purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      sm: { max: "560px" },
+      md: { max: "768px" },
+      tb: { max: "960px" },
+    },
     extend: {},
     letterSpacing: {
       tightest: "-.075em",

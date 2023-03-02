@@ -5,9 +5,9 @@
                 <div class="gray-scale h-6"></div>
                 <div class="gray-scale h-6"></div>
                 <div class="gray-scale h-6"></div>
-                <div>
+                <div class="mt-5">
                     <button class="gray-scale p-2 m-1 w-8 h-10 rounded-lg"></button>
-                    <button class="gray-scale p-2 m-1 w-16 h-10 rounded-lg"></button>
+                    <button class="gray-scale p-2 m-1 w-20 h-10 rounded-lg"></button>
                     <button class="gray-scale p-2 m-1 w-20 h-10 rounded-lg"></button>
                 </div>
             </div>

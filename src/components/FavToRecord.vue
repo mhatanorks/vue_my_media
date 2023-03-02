@@ -8,6 +8,7 @@ import axios from "axios";
 import { ref, Ref } from "vue";
 import { useLogin } from "../hooks/useLogin";
 import { DeleteFavBooks } from "../hooks/deleteFav";
+import { useTabStore } from "../stores/ProductStore";
 
 interface Fav {
   authors: string[];
@@ -15,7 +16,7 @@ interface Fav {
   thumbnail: string;
   title: string;
 }
-
+const store = useTabStore();
 const uni = defineProps<{ show: Boolean; fav: Fav | any }>();
 const getDate = new Date();
 getDate.setDate(getDate.getDate());
@@ -50,7 +51,8 @@ const recordBooks = async (e: Event) => {
     `http://127.0.0.1:8000/users/${userData.value.id}`,
     userData.value
   );
-  // location.reload();
+  store.changeTab('button1')
+  location.reload();
 };
 </script>
 

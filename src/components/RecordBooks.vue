@@ -42,15 +42,10 @@ onMounted(() => {
   Loading();
 });
 
-const clickDelete = async (fav: any) => {
-  DeleteFavBooks(fav, loginUser.value);
-  await Loading();
-  location.reload();
-};
 </script>
 <template>
   <div v-for="fav in userData" :key="fav.title" class="flex justify-center">
-    <div class="thumbnail">
+    <div class="thumbnail w-32">
       <!-- 画像がある場合   -->
       <img v-if="fav.thumbnail && fav.thumbnail" :src="fav.thumbnail" />
       <!-- 画像がない場合 -->

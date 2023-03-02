@@ -40,6 +40,55 @@
           "date": "2023-03-02",
           "Memo": "よんだ",
           "delete": false
+        },
+        {
+          "title": "ひーろひーろひよこっこ",
+          "authors": [
+            "比留井洋子"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=c4x1QgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "date": "2023-03-02",
+          "Memo": "おもろい",
+          "delete": false
+        },
+        {
+          "title": "鬼滅の刃 1",
+          "authors": [
+            "吾峠呼世晴"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=QlmenQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "date": "2023-03-02",
+          "Memo": "読んだ\n",
+          "delete": false
+        },
+        {
+          "title": "名探偵コナン",
+          "authors": [
+            "青山剛昌"
+          ],
+          "date": "2023-03-02",
+          "Memo": "長い",
+          "delete": false
+        },
+        {
+          "title": "決定版ドラえもん大事典",
+          "authors": [
+            "藤子 F・不二雄",
+            "いそほゆうすけ"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=iZmytAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "date": "2023-03-02",
+          "Memo": "ドラ",
+          "delete": false
+        },
+        {
+          "title": "ぼくは、うに。~ミヌエットの男の子~",
+          "authors": [
+            "unico_uniuni"
+          ],
+          "date": "2023-03-02",
+          "Memo": "可愛い",
+          "delete": false
         }
       ],
       "favBooks": [
@@ -86,7 +135,7 @@
             "比留井洋子"
           ],
           "thumbnail": "http://books.google.com/books/content?id=c4x1QgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-          "delete": false
+          "delete": true
         },
         {
           "title": "リーダブルコード",
@@ -104,7 +153,15 @@
             "いそほゆうすけ"
           ],
           "thumbnail": "http://books.google.com/books/content?id=iZmytAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-          "delete": false
+          "delete": true
+        },
+        {
+          "title": "鬼滅の刃 1",
+          "authors": [
+            "吾峠呼世晴"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=QlmenQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": true
         }
       ]
     },
