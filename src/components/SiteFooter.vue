@@ -5,26 +5,34 @@
 ユーザーネーム
 -->
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+console.log("a");
+</script>
 
 <template>
   <footer class="text-center pt-3 pb-5 w-100%">
     <nav>
       <RouterLink to="/">
-        <button class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl">
-          <img src="../images/icons/book_image.png" alt="">
+        <button
+          test-data="syoko-page"
+          class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl"
+        >
+          <img src="../images/icons/book_image.png" alt="" />
           <p>書庫</p>
         </button>
       </RouterLink>
       <RouterLink to="/SearchPage">
         <button class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl">
-          <img src="../images/icons/search_image.png" alt="">
+          <img src="../images/icons/search_image.png" alt="" />
           <p>検索</p>
         </button>
       </RouterLink>
       <RouterLink to="/anonymous">
-        <button class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl">
-          <img src="../images/icons/warp_image.png" alt="">
+        <button
+          test-data="notFound-page"
+          class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl"
+        >
+          <img src="../images/icons/warp_image.png" alt="" />
           <p>異次元</p>
         </button>
       </RouterLink>

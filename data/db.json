@@ -89,6 +89,16 @@
           "date": "2023-03-02",
           "Memo": "可愛い",
           "delete": false
+        },
+        {
+          "title": "鋼のメンタルを手に入れる",
+          "authors": [
+            "いっちー"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=Ab5ezQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "date": "2023-03-06",
+          "Memo": "tako\n",
+          "delete": false
         }
       ],
       "favBooks": [
@@ -114,12 +124,12 @@
             "いっちー"
           ],
           "thumbnail": "http://books.google.com/books/content?id=Ab5ezQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-          "delete": false
+          "delete": true
         },
         {
           "title": "2023 猫城主さんじゅーろーカレンダー",
           "thumbnail": "http://books.google.com/books/content?id=qA9IzwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-          "delete": false
+          "delete": true
         },
         {
           "title": "つぐはらふみのものろーぐ first session",
@@ -127,7 +137,7 @@
             "つぐはらふみ"
           ],
           "thumbnail": "http://books.google.com/books/content?id=NXwnNwAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
-          "delete": false
+          "delete": true
         },
         {
           "title": "ひーろひーろひよこっこ",
@@ -162,6 +172,41 @@
           ],
           "thumbnail": "http://books.google.com/books/content?id=QlmenQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
           "delete": true
+        },
+        {
+          "title": "鬼滅の刃 1",
+          "authors": [
+            "吾峠呼世晴"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=QlmenQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": false
+        },
+        {
+          "title": "決定版ドラえもん大事典",
+          "authors": [
+            "藤子 F・不二雄",
+            "いそほゆうすけ"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=iZmytAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": false
+        },
+        {
+          "title": "Guide to Uni Life",
+          "authors": [
+            "Lucy Tobin"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=05VmPgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": true
+        },
+        {
+          "title": "自走プログラマー",
+          "authors": [
+            "清水川貴之",
+            "清原弘貴",
+            "tell-k"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=8W5nzQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": false
         }
       ]
     },
@@ -170,6 +215,90 @@
       "email": "tako",
       "password": "tako",
       "id": 3
+    },
+    {
+      "username": "みいこ",
+      "email": "miiko",
+      "password": "miiko",
+      "recordBooks": [
+        {
+          "title": "ブルーロック(6)",
+          "authors": [
+            "金城宗幸",
+            "ノ村優介"
+          ],
+          "date": "2023-03-06",
+          "Memo": "うに",
+          "delete": false
+        }
+      ],
+      "favBooks": [
+        {
+          "title": "ブルーロック(1)",
+          "authors": [
+            "金城宗幸",
+            "ノ村優介"
+          ],
+          "thumbnail": "http://books.google.com/books/content?id=Uu4wwAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": false
+        }
+      ],
+      "id": 4
+    },
+    {
+      "username": "ホゲータ",
+      "email": "hoge@example.com",
+      "password": "hogehoge",
+      "recordBooks": [
+        {
+          "title": "SWITCH Vol.39 No.11 特集ポケモンミュージアム2021",
+          "thumbnail": "http://books.google.com/books/content?id=jT6zzgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "date": "2023-03-03",
+          "Memo": "面白かった",
+          "delete": false
+        },
+        {
+          "title": "ポケモンをさがせ!",
+          "thumbnail": "http://books.google.com/books/content?id=PkbhPQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "date": "2023-03-06",
+          "Memo": "面白かった！",
+          "delete": false
+        }
+      ],
+      "favBooks": [
+        {
+          "title": "SWITCH Vol.39 No.11 特集ポケモンミュージアム2021",
+          "thumbnail": "http://books.google.com/books/content?id=jT6zzgEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": true
+        },
+        {
+          "title": "ポケモンをさがせ!",
+          "thumbnail": "http://books.google.com/books/content?id=PkbhPQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": true
+        },
+        {
+          "title": "ポケモンをさがせ!",
+          "thumbnail": "http://books.google.com/books/content?id=PkbhPQAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+          "delete": false
+        }
+      ],
+      "id": 5
+    },
+    {
+      "username": "ホゲータ",
+      "email": "hoge@example.com",
+      "password": "hoge@example.com",
+      "recordBooks": [],
+      "favBooks": [],
+      "id": 6
+    },
+    {
+      "username": "a",
+      "email": "a",
+      "password": "s",
+      "recordBooks": [],
+      "favBooks": [],
+      "id": 7
     }
   ]
 }

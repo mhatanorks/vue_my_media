@@ -53,7 +53,7 @@ const loginUser = async (e: any) => {
 
 <template>
   <div class="login-form">
-    <p>Login Form</p>
+    <p data-test="LoginForm">Login Form</p>
     <form action="">
       <div>
         <label for=""
@@ -71,8 +71,8 @@ const loginUser = async (e: any) => {
         </button>
       </div>
     </form>
-    <p v-if="loginError">該当ユーザーなし</p>
-    <p v-if="catchError">サーバーエラーです。時間をおいてお試しください</p>
+    <p v-if="loginError" id="uni">該当ユーザーなし</p>
+    <p v-if="catchError" data-test="kani">サーバーエラーです。時間をおいてお試しください</p>
 
     <button
       id="show-modal"
