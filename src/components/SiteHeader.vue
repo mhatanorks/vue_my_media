@@ -18,7 +18,7 @@ const logoutUser = async () => {
 
   const item = JSON.parse(localStorage.getItem("login") ?? '{"user":[]}');
 
-  if (location.href === "http://127.0.0.1:5173/") {
+  if (location.href === "http://localhost:5173/") {
     location.reload();
   } else {
     loginUser.value = null;
@@ -30,12 +30,17 @@ const logoutUser = async () => {
 
 <template>
   <header class="flex justify-between">
-    <p class="text-3xl tracking-tightest font-thin italic mt-3 ml-5
-    sm:text-2xl sm:mt-4 sm:ml-3" >
+    <p
+      class="text-3xl tracking-tightest font-thin italic mt-3 ml-5 sm:text-2xl sm:mt-4 sm:ml-3"
+    >
       MYBOOKSRECORDER
     </p>
     <nav class="flex">
-      <p v-if="loginUser" class="pt-4 font-bold text-xl sm:text-base sm:pt-5">
+      <p
+        v-if="loginUser"
+        class="pt-4 font-bold text-xl sm:text-base sm:pt-5"
+        test-data="username"
+      >
         🌞 Hello {{ loginUser }} !! 🌞
       </p>
       <button

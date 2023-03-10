@@ -16,6 +16,8 @@ interface User {
   username: string;
   email: string;
   password: string;
+  recordBooks: [];
+  favBooks: [];
 }
 // カスタムフック
 const loginUser = useLogin();
@@ -23,13 +25,22 @@ const loginUser = useLogin();
 const userName = ref<string>("");
 const email = ref<string>("");
 const password = ref<string>("");
+const textError = ref<boolean>(false);
 
 const entryUser = async (e: Event) => {
   e.preventDefault();
+
+  if (!userName.value || !email.value || !password.value) {
+    console.log("ない");
+    textError.value = true;
+    return;
+  }
   const newUser: User = {
     username: userName.value,
     email: email.value,
     password: password.value,
+    recordBooks: [],
+    favBooks: [],
   };
   // db送信
   await axios.post("http://127.0.0.1:8000/users", newUser);
@@ -69,8 +80,10 @@ const entryUser = async (e: Event) => {
               登録
             </button>
           </div>
+          <p v-if="textError" class="pt-2 text-red-400">
+            入力欄は全て入力してね
+          </p>
         </form>
-        <h2>{{ loginUser }}</h2>
       </div>
     </section>
   </Transition>

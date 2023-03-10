@@ -9,11 +9,10 @@ import { useTabStore } from "../stores/ProductStore";
 const loginUser = useLogin();
 const store = useTabStore();
 
-const activeButton = ref("button1");
+const checked = store.checked;
+const unchecked = store.unchecked;
 
-function showInfo(buttonName: any) {
-  activeButton.value = buttonName;
-}
+console.log(store.checked);
 </script>
 
 <template>
@@ -23,13 +22,13 @@ function showInfo(buttonName: any) {
       <!-- タブ切り替え -->
       <button
         @click="store.changeTab('button1')"
-        class="p-2 m-2 bg-teal-400 rounded-lg"
+        :class="store.viewActive ? checked : unchecked"
       >
         My Records
       </button>
       <button
         @click="store.changeTab('button2')"
-        class="p-2 m-2 bg-teal-400 rounded-lg"
+        :class="store.viewActive ? unchecked : checked"
       >
         fav Books
       </button>
