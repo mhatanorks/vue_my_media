@@ -36,6 +36,7 @@ const Loading = async () => {
           (e: Book) => e.delete == false
         ))
     );
+    console.log(userData.value[0]);
 };
 
 onMounted(() => {
