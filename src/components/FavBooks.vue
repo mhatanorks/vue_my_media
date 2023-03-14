@@ -22,7 +22,7 @@ interface Book {
 }
 
 interface Users {
-  favBooks : Book
+  favBooks: Book;
 }
 
 const loginUser = useLogin();
@@ -34,11 +34,11 @@ const Loading = async () => {
     .then(
       (res) =>
         // console.log(res.data[0]), (userData.value = res.data[0].favBooks)
-        (userData.value = res.data[0].favBooks.filter(
+        (console.log(res.data[0]),userData.value = res.data[0].favBooks.filter(
           (e: Book) => e.delete == false
         ))
     );
-    console.log(userData.value[0])
+  console.log(userData.value[0]);
 };
 
 onMounted(() => {
@@ -53,7 +53,12 @@ const clickDelete = async (fav: any) => {
 </script>
 <template>
   <p data-test="fav-stocks"></p>
-  <div data-test="favorite-book" v-for="fav in userData" :key="fav.title" class="flex justify-center">
+  <div
+    data-test="favorite-book"
+    v-for="fav in userData"
+    :key="fav.title"
+    class="flex justify-center"
+  >
     <div class="thumbnail">
       <!-- 画像がある場合   -->
       <img v-if="fav.thumbnail && fav.thumbnail" :src="fav.thumbnail" />
