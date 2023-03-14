@@ -15,11 +15,12 @@ interface User {
   password: string;
 }
 
+const count = ref(0)
 const email = ref("");
 const password = ref("");
 const loginError = ref(false); // ログインエラー
 const catchError = ref(false); // サーバーエラー
-const showModal = ref(false); // 登録モーダル
+const showModal = ref(false); // 登録モーダル   
 
 const loginUser = async (e: any) => {
   e.preventDefault();
@@ -31,9 +32,7 @@ const loginUser = async (e: any) => {
         `http://127.0.0.1:8000/users?email=${email.value}&password=${password.value}`
       )
       .then((res) => (console.log(res), (data.value = res.data[0])));
-    console.log(data.value);
     if (data.value) {
-      console.log("login");
       // localstrage付与
       localStorage.setItem(
         "login",
@@ -46,7 +45,6 @@ const loginUser = async (e: any) => {
     }
   } catch (error) {
     catchError.value = true;
-    console.log(error);
   }
 };
 </script>
@@ -62,16 +60,16 @@ const loginUser = async (e: any) => {
       </div>
       <div>
         <label for="" class="tracking-custom"
-          >パスワード<input type="password" v-model="password"
+          >パスワード<input type="password" v-model="password" autocomplete="off"
         /></label>
       </div>
       <div>
-        <button @click="loginUser" class="p-3 mt-4 bg-teal-400 rounded-lg">
+        <button @click="loginUser" data-test="login-button" class="p-3 mt-4 bg-teal-400 rounded-lg">
           ログイン
         </button>
       </div>
     </form>
-    <p v-if="loginError" id="uni">該当ユーザーなし</p>
+    <p v-if="loginError" id="loginError" data-test="loginError">該当ユーザーなし</p>
     <p v-if="catchError" data-test="kani">サーバーエラーです。時間をおいてお試しください</p>
 
     <button

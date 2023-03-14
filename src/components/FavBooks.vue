@@ -21,6 +21,10 @@ interface Book {
   delete: boolean;
 }
 
+interface Users {
+  favBooks : Book
+}
+
 const loginUser = useLogin();
 const userData = ref<number | null | any>();
 
@@ -34,6 +38,7 @@ const Loading = async () => {
           (e: Book) => e.delete == false
         ))
     );
+    console.log(userData.value[0])
 };
 
 onMounted(() => {
@@ -47,7 +52,8 @@ const clickDelete = async (fav: any) => {
 };
 </script>
 <template>
-  <div v-for="fav in userData" :key="fav.title" class="flex justify-center">
+  <p data-test="fav-stocks"></p>
+  <div data-test="favorite-book" v-for="fav in userData" :key="fav.title" class="flex justify-center">
     <div class="thumbnail">
       <!-- 画像がある場合   -->
       <img v-if="fav.thumbnail && fav.thumbnail" :src="fav.thumbnail" />
@@ -55,7 +61,7 @@ const clickDelete = async (fav: any) => {
       <img v-if="!fav.thumbnail" src="../images/noImages.png" />
     </div>
     <div class="fav-text w-72 ml-4">
-      <div>{{ fav.title }}</div>
+      <div data-test="fav-title">{{ fav.title }}</div>
       <div class="flex justify-center">
         <div v-for="author in fav.authors" :key="fav.id" class="m-1">
           {{ author }}
@@ -76,7 +82,7 @@ const clickDelete = async (fav: any) => {
             >amazon</a
           >
         </button>
-        <RecordButton :fav="fav"/>
+        <RecordButton :fav="fav" />
       </div>
     </div>
   </div>

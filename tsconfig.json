@@ -23,6 +23,6 @@
     "src/router/index.ts",
     "src/main.ts",
     "src/main.ts"
-  ],
+, "src/components/Login.spec.js"  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

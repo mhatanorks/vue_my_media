@@ -5,7 +5,6 @@ export const useTabStore = defineStore("user", {
     activeButton: "button1" as string,
     viewActive: true,
     checked: "p-2 m-2 bg-teal-400 rounded-lg border-4 border-teal-400" as string,
-    uni: "",
     unchecked: "p-2 m-2 bg-teal-50 rounded-lg border-4 border-teal-400" as string,
   }),
   actions: {
