@@ -1,16 +1,18 @@
 import { mount } from "@vue/test-utils";
-import SearchBooks from "./SearchBooks.vue";
-import { setActivePinia, createPinia } from 'pinia'
+import SiteFooter from "./SiteFooter.vue";
 
-describe("Click buttons expect contents", () => {
-  beforeEach(() => {
-    // creates a fresh pinia and make it active so it's automatically picked
-    // up by any useStore() call without having to pass it to it:
-    // `useStore(pinia)`
-    setActivePinia(createPinia())
-  })
-  it("click syoko", () => {
-    const wrapper = mount(SearchBooks);
-    expect(2 + 2).toBe(4);
+import { setActivePinia, createPinia } from "pinia";
+beforeEach(() => {
+  // creates a fresh pinia and make it active so it's automatically picked
+  // up by any useStore() call without having to pass it to it:
+  // `useStore(pinia)`
+  setActivePinia(createPinia());
+});
+
+describe("Footer", () => {
+  it("should render Home", async () => {
+    const wrapper = mount(SiteFooter);
+    const button = wrapper.find('[data-test="search-page"]');
+    await button.trigger("click");
   });
 });

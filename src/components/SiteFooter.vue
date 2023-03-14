@@ -6,7 +6,6 @@
 -->
 
 <script setup lang="ts">
-console.log("a");
 </script>
 
 <template>
@@ -14,7 +13,7 @@ console.log("a");
     <nav>
       <RouterLink to="/">
         <button
-          test-data="syoko-page"
+          data-test="syoko-page"
           class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl"
         >
           <img src="../images/icons/book_image.png" alt="" />
@@ -22,14 +21,14 @@ console.log("a");
         </button>
       </RouterLink>
       <RouterLink to="/SearchPage">
-        <button class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl">
+        <button data-test="search-page" class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl">
           <img src="../images/icons/search_image.png" alt="" />
           <p>検索</p>
         </button>
       </RouterLink>
       <RouterLink to="/anonymous">
         <button
-          test-data="notFound-page"
+          data-test="notFound-page"
           class="px-7 py-2 mx-3 bg-teal-50 rounded-lg font-bold text-xl"
         >
           <img src="../images/icons/warp_image.png" alt="" />

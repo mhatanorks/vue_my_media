@@ -18,9 +18,9 @@
 .gray-scale {
   background: linear-gradient(
     90deg,
-    #a1a1a1,
-    #b3b3b3,
-    #a1a1a1
+    #c2c1c1,
+    #e1e1e1,
+    #c2c1c1
   ); /*グラデーションを定義*/
   background-size: 200% 200%; /*サイズを大きくひきのばす*/
   animation: bgGradient 1.5s ease infinite;

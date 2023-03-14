@@ -44,6 +44,7 @@ onMounted(() => {
 
 </script>
 <template>
+  <p data-test="rec-books"></p>
   <div v-for="fav in userData" :key="fav.title" class="flex justify-center">
     <div class="thumbnail w-32">
       <!-- 画像がある場合   -->
