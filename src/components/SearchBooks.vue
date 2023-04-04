@@ -113,7 +113,7 @@ const searchBooks = async (e: Event) => {
         <!-- 画像がない場合 -->
         <img
           v-if="!result.volumeInfo.imageLinks"
-          src="../images/noImages.png"
+          src="../images/Noimages.png"
         />
       </div>
 

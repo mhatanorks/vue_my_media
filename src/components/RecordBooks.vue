@@ -51,7 +51,7 @@ onMounted(() => {
       <!-- 画像がある場合   -->
       <img v-if="fav.thumbnail && fav.thumbnail" :src="fav.thumbnail" />
       <!-- 画像がない場合 -->
-      <img v-if="!fav.thumbnail" src="../images/noImages.png" />
+      <img v-if="!fav.thumbnail" src="../images/Noimages.png" />
     </div>
     <div class="fav-text w-72 ml-4">
       <div>{{ fav.title }}</div>
