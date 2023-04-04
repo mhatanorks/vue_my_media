@@ -132,7 +132,6 @@ const recordBooks = async (e: Event) => {
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
-
   font-size: 18px;
   font-weight: 700;
 }
